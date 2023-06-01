@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cards-bars .card-box {
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.cards-bars .card {
+    color: gray;
+    box-shadow: 1px 2px 8px #5e5d5d;
+}
+
+.cards-bars .card-box:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.cards-bars .card h3 {
+    padding: 15px;
+    background-color: rgb(179, 34, 34);
+    color: white;
+}
+
+.cards-bars .card .money {
+    padding: 15px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.cards-bars .card .month {
+    padding-bottom: 15px;
+}
+
+.cards-bars .card .text {
+    padding: 0 15px 15px;
+}
+
+.cards-bars .card span {
+    margin: 0 auto 10px auto;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: gray;
+}
+
+.cards-bars .card span:nth-child(odd) {
+    width: 90%;
+}
+
+.indicators {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.indicators .indicators-box {
+    box-shadow: 1px 2px 8px #5e5d5d;
+}
+
+.indicators .indicators-box .indicator-box {
+    padding: 15px;
+}
+
+.labels span:first-child {
+    display: block;
+    float: left;
+}
+
+.labels span:nth-child(2) {
+    display: block;
+    float: right;
+}
+
+.bar {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background-color: gray;
+    margin: 15px 0 0 0;
+}
+
+.indicators .indicators-box .indicator-box .bar::after {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgb(179, 34, 34);
+    transition: all .5s;
+    display: block;
+}
+
+.cards-bars .card-box1:hover~.indicators .indicators-box .indicator-box .bar::after {
+    width: 10%;
+    height: 100%;
+}
+
+.cards-bars .card-box2:hover~.indicators .indicators-box .indicator-box .bar::after {
+    width: 20%;
+    height: 100%;
+}
+
+.cards-bars .card-box2:hover~.indicators .indicators-box .indicator-box .bar2::after {
+    width: 50%;
+    height: 100%;
+}
+
+.cards-bars .card-box3:hover~.indicators .indicators-box .indicator-box .bar::after {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 20px auto 0 auto;
+        transform: translate(0%, 0%);
+    }
+    .cards-bars .card-box {
+        width: 100%;
+    }
+}
